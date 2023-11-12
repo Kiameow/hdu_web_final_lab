@@ -43,5 +43,5 @@
 ![](img/PostPage.png)
 
 ## 项目预览
-[--> Working on... <--](https://kiameow.github.io/hdu_web_final_lab/)
+[--> Working on... <--](https://kiameow.github.io/hdu_web_final_lab/final_lab)
 
