@@ -1,5 +1,7 @@
 # 个人影评书评站点
 
+## 项目预览
+[--> Working on... <--](https://kiameow.github.io/hdu_web_final_lab/final_lab)
 
 ## 项目简介
 
@@ -42,6 +44,4 @@
 ### 表单页面/PostPage
 ![](img/PostPage.png)
 
-## 项目预览
-[--> Working on... <--](https://kiameow.github.io/hdu_web_final_lab/final_lab)
 
