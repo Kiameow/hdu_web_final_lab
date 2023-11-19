@@ -1,19 +1,5 @@
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --box-shadow1: 0 2px 4px 0;
-}
-
-body {
-  font-family: 'Helvetica Neue',sans-serif;
-}
-
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   border-bottom: 1px solid black;
@@ -22,6 +8,8 @@ body {
   height: 3rem;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--main-white);
+  z-index: 2;
 }
 
 .logo {
@@ -69,9 +57,4 @@ body {
 a {
   text-decoration: none;
   color: black;
-}
-
-.main {
-  width: 100%;
-
 }

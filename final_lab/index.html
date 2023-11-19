@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K Comment</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/lobster-2" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6a753f9afd.js" crossorigin="anonymous"></script>
                  
 </head>
 <body>
@@ -19,42 +20,69 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="postPage.html">Write</a></li>
-        <li><a href="#footer">Contact</a></li> 
+        <li><a href="#contact">Contact</a></li> 
       </ul>
     </div>
   </section>
 
   <section class="main">
-    <div class="right-heading-card">
-      <h1>Movie</h1>
-      <div class="quote"></div>
-      <div class="cover">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="right-heading-card heading-card">
+      <div class="words">
+        <h1>Movie</h1>
+        <div class="quote">
+          Filmmaking is a chance to live many lifetimes.
+        </div>
+        <button class="start-reading">
+          <a class="reading-link" href="viewPage.html">start reading</a>
+        </button>
       </div>
-      <button class="start-reading">
-        <a href="viewPage.html">start-reading</a>
-      </button>
+      <div class="cover">
+        <img class="back-cover" src="img/jingqiduizhang.webp" alt="">
+        <img class="front-cover" src="img/priceless.webp" alt="">
+        <img class="back-cover" src="img/zhuiji.webp" alt="">
+      </div>
     </div>
 
-    <div class="left-heading-card"> 
-      <h1>Book</h1>
-      <div class="quote"></div>
+    <div class="left-heading-card heading-card"> 
+      <div class="words">
+        <h1>Book</h1>
+        <div class="quote">
+          “There is more treasure in books than in all the pirate's loot on Treasure Island.” ― Walt Disney
+        </div>
+        <button class="start-reading" >
+          <a class="reading-link" href="viewPage.html">start reading</a>
+        </button>
+      </div>
       <div class="cover">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img class="back-cover" src="img/book1.jpg" alt="">
+        <img class="front-cover" src="img/book2.jpg" alt="">
+        <img class="back-cover" src="img/book3.jpg" alt="">
       </div>
       
-      <button class="start-reading" >
-        <a href="viewPage.html">start-reading</a>
-      </button>
     </div>
   </section>
 
+  <section id="contact">
+    <h2>let's work together</h2>
+    <p>how do you take your coffee?</p>
+    <div id="links">
+      <a id="profile-link" class="link" href="https://github.com/Kiameow" target="_blank"><div class="icon"><i class="fa-brands fa-github"></i></div>github</a>
+      <a class="link" href="https://twitter.com/Badger_xxxxxx" target="_blank"><div class="icon"><i class="fa-brands fa-twitter"></i></div>twitter</a>
+      <a class="link" href="mailto:zhanglumi@163.com" target="_blank"><div class="icon"><i class="fa-solid fa-envelope"></i></div>send a email</a>
+    </div>
+
+  </section>
+
   <section class="footer">
-    <div></div>
+    <div class="support-by">Support by <a href="">Kiameow</a></div>
+    <div class="inspired-by">Inspired by 
+      <span class="thanks-link">
+        <a href="">Medium</a>
+        <a href="">Douban</a>
+        <a href="">FreeCodeCamp</a>
+      </span>
+      
+    </div>
   </section>
 </body>
 </html>

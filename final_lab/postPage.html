@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K Comment</title>
-  <link rel="stylesheet" href="css/post.css">
+  <link rel="stylesheet" href="css/postPage.css">
   <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/lobster-2" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#">Write</a></li>
-        <li><a href="#footer">Contact</a></li> 
+        <li><a href="index.html#contact">Contact</a></li> 
       </ul>
     </div>
   </section>
@@ -42,13 +42,24 @@
       
       <div class="col-units">
         <div class="post-img">
-          <label for="cover">封面图片</label>
-          <input id="cover" type="file">
+          <div class="post-img-word">
+            <label >背景图片</label>
+            <label for="background" class="file-upload">
+              上传图片
+            </label>
+            <input id="background" type="file">
+          </div>
           <img src="" alt="">
         </div>
-        <div class="post-cover">
-          <label for="background">背景图片</label>
-          <input id="background" type="file">
+        <div class="post-img">
+          <div class="post-img-word">
+            <label >背景图片</label>
+            <label for="background" class="file-upload">
+              上传图片
+            </label>
+            <input id="background" type="file">
+          </div>
+          
           <img src="" alt="">
         </div>
       </div>
@@ -57,7 +68,23 @@
         <label for="content">文章内容</label>
         <textarea name="" id="" cols="30" rows="10"></textarea>
       </div>
-    </section>
+
+      <div class="form-submit">
+        <input type="submit" name="" id="" value="发布">
+      </div>
+    </form>
+  </section>
+
+  <section class="footer">
+    <div class="support-by">Support by <a href="">Kiameow</a></div>
+    <div class="inspired-by">Inspired by 
+      <span class="thanks-link">
+        <a href="">Medium</a>
+        <a href="">Douban</a>
+        <a href="">FreeCodeCamp</a>
+      </span>
+      
+    </div>
   </section>
 </body>
 </html>

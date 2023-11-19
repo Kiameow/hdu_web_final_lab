@@ -1,0 +1,29 @@
+.footer {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 1px solid black;
+}
+
+.footer a{
+  font-style: italic;
+}
+
+/* .footer .support-by {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+} */
+
+/* .footer .inspired-by {
+  width: 40%;
+  display: flex;
+} */
+
+.footer .thanks-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
