@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,10 +13,36 @@
   --minor-grey: #E5E5E5;
   --main-grey: grey;
   --main-dark: #383838;
-  --font1: 'Helvetica Neue',sans-serif;
+  --main-font: "HelveticaNeue",sans-serif;
+  --logo-font: "whisper", sans-serif;
 }
 
+@font-face {
+  font-family: "HeleticaNeue";
+  src: url("../font/HeleticaNeue-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HeleticaNeue";
+  src: url("../font/HeleticaNeue-Black.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HeleticaNeue";
+  src: url("../font/HeleticaNeueLightItalic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: whisper;
+  src: url("../font/Whisper-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: var(--font1);
+  font-family: var(--main-font);
 }
 
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,48 @@
+*, 
+*::after, 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --box-shadow1: 0 2px 4px 0 black;
+  --box-shadow2: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  --main-white: white;
+  --minor-grey: #E5E5E5;
+  --main-grey: grey;
+  --main-dark: #383838;
+  --main-font: 'HelveticaNeue',sans-serif;
+  --logo-font: 'whisper', sans-serif;
+}
+
+$font-path: '../font/';
+
+$font-family: 'HeleticaNeue';
+
+$font-styles: (
+  normal: 'HeleticaNeue-Medium.otf',
+  bold: 'HeleticaNeue-Black.otf',
+  italic: 'HeleticaNeueLightItalic.ttf',
+);
+
+@each $style, $file in $font-styles {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$font-path}#{$file}');
+    font-weight: if($style == 'bold', bold, normal);
+    font-style: if($style == 'italic', italic, normal);
+  }
+}
+
+@font-face {
+  font-family: whisper;
+  src: url('#{$font-path}Whisper-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--main-font);
+}
