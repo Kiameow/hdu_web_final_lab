@@ -24,12 +24,6 @@ body {
   row-gap: 1rem;
 }
 
-.welcome div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .logo {
   display: block;
   background-color: grey;
@@ -41,6 +35,20 @@ body {
   height: 5rem;
   box-shadow: var(--box-shadow1);
   margin-right: 5px;
+}
+
+.welcome-words {
+  font-weight: bold;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 150px;
+}
+
+.welcome-words span{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .login-box {
@@ -85,4 +93,30 @@ input[type="submit"] {
   background-color: var(--main-dark);
   border: none;
   cursor: pointer;
+}
+
+input[type="submit"]:hover{
+  color: var(--main-white);
+  background-color: var(--main-grey);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 740px) {
+  .login {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-words {
+    font-size: 2rem;
+  }
+
+  .login-box {
+    margin-top: -5vh;
+  }
 }

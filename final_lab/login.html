@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K Comment</title>
   <link rel="stylesheet" href="css/login.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <section class="login">
+    
     <section class="welcome">
       <div class="logo">
         K
       </div>
-      <div class="welcome-words">登录至K Comment</div>
+      <div class="welcome-words">
+        <span>登录至</span>
+        <span>K Comment</span>
+      </div>
     </section>
 
 
@@ -21,13 +27,13 @@
     <form class="login-box" action="postPage.html" method="post">
       <div class="login-unit">
         <label for="username">用户名</label>
-        <input type="text">
+        <input type="text" name="username" id="username">
       </div>
       <div class="login-unit">
         <label for="password">密码</label>
-        <input type="password">
+        <input type="password" name="password" id="password">
       </div>
-      <input type="submit" value="登录">
+      <input type="submit" value="登录" id="submit">
     </form>
   </section>
 
@@ -35,13 +41,13 @@
     <div class="support-by">Support by <a href="">Kiameow</a></div>
     <div class="inspired-by">Inspired by 
       <span class="thanks-link">
-        <a href="">Medium</a>
-        <a href="">Douban</a>
-        <a href="">FreeCodeCamp</a>
+        <a href="https://medium.com/">Medium</a>
+        <a href="https://movie.douban.com/explore">Douban</a>
+        <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
       </span>
-      
     </div>
   </section>
+
   <script src="js/login.js"></script>
 </body>
 </html>
