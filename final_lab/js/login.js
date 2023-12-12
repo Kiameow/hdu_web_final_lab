@@ -10,4 +10,5 @@ function generateCookie() {
 
 $('#submit').click(function() {
   generateCookie();
+  window.location.href = "postPage.html";
 })
