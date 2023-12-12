@@ -88,14 +88,14 @@ input {
   padding: 0 12px;
 }
 
-input[type="submit"] {
+input[type="button"] {
   color: var(--main-white);
   background-color: var(--main-dark);
   border: none;
   cursor: pointer;
 }
 
-input[type="submit"]:hover{
+input[type="button"]:hover{
   color: var(--main-white);
   background-color: var(--main-grey);
   border: none;
