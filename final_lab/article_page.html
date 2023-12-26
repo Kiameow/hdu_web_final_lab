@@ -18,9 +18,9 @@
     </div>
     <div class="navigator">
       <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/view_page.html">Articles</a></li> 
-        <li><a href="/post_page.html">Write</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../view_page.html">Articles</a></li> 
+        <li><a href="../post_page.html">Write</a></li>
         <li><a href="#contact">Contact</a></li> 
         
       </ul>
@@ -76,7 +76,10 @@
       $("#main").html(articleSection);
     });
     
-    window.history.replaceState({}, '', `/${category}/${id}`)
+    const pathname = window.location.pathname;
+    const lastIndex = pathname.lastIndexOf('/');
+    const path_result = pathname.substring(0, lastIndex);
+    window.history.replaceState({}, '', `${path_result}/${category}/${id}`)
   </script>
 </body>
 </html>

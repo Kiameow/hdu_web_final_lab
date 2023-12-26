@@ -17,7 +17,7 @@
     <div class="navigator">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="/view_page.html">Articles</a></li> 
+        <li><a href="view_page.html">Articles</a></li> 
         <li><a href="post_page.html">Write</a></li>
         <li><a href="#contact">Contact</a></li> 
       </ul>
@@ -87,5 +87,13 @@
       </span>
     </div>
   </section>
+
+  <script>
+    var url      = window.location.href;  // 返回完整 URL (https://www.runoob.com/html/html-tutorial.html)
+    var pathname = window.location.pathname; // 返回路径部分 (/html/html-tutorial.html)
+    var origin   = window.location.origin;   // 返回基础 URL (https://www.runoob.com/)
+    var domain = document.domain;  // 返回域名部分 (www.runoob.com)
+    console.log(`${url}, ${pathname}, ${origin}, ${domain}`);
+  </script>
 </body>
 </html>
