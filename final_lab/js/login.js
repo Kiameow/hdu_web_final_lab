@@ -2,7 +2,7 @@ function generateCookie() {
   const username = $('#username').val();
   // const password = $('#password').val();
 
-  Cookies.set('username', username, { expires: 7});
+  Cookies.set('username', username, { expires: 7 });
   
 }
 
@@ -10,5 +10,5 @@ function generateCookie() {
 
 $('#submit').click(function() {
   generateCookie();
-  window.location.href = "postPage.html";
+  window.location.href = "post_page.html";
 })
