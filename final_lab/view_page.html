@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Comment</title>
+  <link rel="stylesheet" href="css/viewPage.css">
+  <script src="https://kit.fontawesome.com/6a753f9afd.js" crossorigin="anonymous"></script>
+  <script src="js/ejs.min.js"></script>
+  <script src="js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+  <section class="navbar">
+    <div class="logo">
+      <p class="lobster">K</p>
+      <h1>Comment</h1>
+    </div>
+    <div class="navigator">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Articles</a></li> 
+        <li><a href="post_page.html">Write</a></li>
+        <li><a href="#contact">Contact</a></li> 
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="main" id="main">
+    <div class="background">
+      <img src="img/anime-background.jpg" alt="" class="background-img">
+    </div>
+
+    <div class="shield">
+
+    </div>
+    <div class="plate" id="plate">
+
+    </div> 
+  </section>
+
+  <section id="contact">
+    <h2>let's work together</h2>
+    <p>how do you take your coffee?</p>
+    <div id="links">
+      <a id="profile-link" class="link" href="https://github.com/Kiameow" target="_blank"><div class="icon"><i class="fa-brands fa-github"></i></div>github</a>
+      <a class="link" href="https://twitter.com/Badger_xxxxxx" target="_blank"><div class="icon"><i class="fa-brands fa-twitter"></i></div>twitter</a>
+      <a class="link" href="mailto:zhanglumi@163.com" target="_blank"><div class="icon"><i class="fa-solid fa-envelope"></i></div>send a email</a>
+    </div>
+
+  </section>
+
+  <section class="footer">
+    <div class="support-by">Support by <a href="">Kiameow</a></div>
+    <div class="inspired-by">Inspired by 
+      <span class="thanks-link">
+        <a href="https://medium.com/">Medium</a>
+        <a href="https://movie.douban.com/explore">Douban</a>
+        <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
+      </span>
+    </div>
+  </section>
+  <script src="js/import_articles.js"></script>
+  <script>
+    
+
+    const articles = localStorage.getItem('articles');
+    const articlesData = JSON.parse(articles);
+
+    const cardsContainer = document.getElementById('plate');
+    Object.keys(articlesData).forEach(category => {
+      articlesData[category].forEach(article => {
+        const entryCard = document.createElement("a");
+        entryCard.classList.add("entry-card");
+
+        // 添加点击事件处理程序，用于导航到 articlePage.html
+        entryCard.href = `${category}/${article.id}`;
+
+        // 创建 img 元素并设置属性
+        const imgElement = document.createElement("img");
+        imgElement.src = article.imgURL;
+        imgElement.alt = article.imgURL;
+        imgElement.classList.add("card-cover");
+
+        // 创建包含标题和副标题的 div 元素
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("info");
+
+        // 创建 h2 元素并设置标题文本
+        const h2Element = document.createElement("h2");
+        h2Element.textContent = article.title;
+
+        // 创建 p 元素并设置副标题文本
+        const pElement = document.createElement("p");
+        pElement.classList.add("subtitle");
+        pElement.textContent = article.description;
+
+        // 将 h2 和 p 元素添加到 infoDiv
+        infoDiv.appendChild(h2Element);
+        infoDiv.appendChild(pElement);
+
+        // 将 img 元素和 infoDiv 元素添加到 entryCardDiv
+        entryCard.appendChild(imgElement);
+        entryCard.appendChild(infoDiv);
+
+        // 将 entryCardDiv 添加到 body 元素
+        cardsContainer.appendChild(entryCard);
+      });
+    });
+  </script>
+
+  <script src="js/router.js">
+    
+  </script>
+</body>
+</html>

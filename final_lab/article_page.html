@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Comment</title>
+  <link rel="stylesheet" href="css/articlePage.css">
+  <script src="https://kit.fontawesome.com/6a753f9afd.js" crossorigin="anonymous"></script>
+  <script src="js/ejs.min.js"></script>
+  <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+  <section class="navbar">
+    <div class="logo">
+      <p class="lobster">K</p>
+      <h1>Comment</h1>
+
+    </div>
+    <div class="navigator">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view_page.html">Articles</a></li> 
+        <li><a href="/post_page.html">Write</a></li>
+        <li><a href="#contact">Contact</a></li> 
+        
+      </ul>
+    </div>
+  </section>
+
+  <section id="main">
+    
+  </section>
+
+  <section id="contact">
+    <h2>let's work together</h2>
+    <p>how do you take your coffee?</p>
+    <div id="links">
+      <a id="profile-link" class="link" href="https://github.com/Kiameow" target="_blank"><div class="icon"><i class="fa-brands fa-github"></i></div>github</a>
+      <a class="link" href="https://twitter.com/Badger_xxxxxx" target="_blank"><div class="icon"><i class="fa-brands fa-twitter"></i></div>twitter</a>
+      <a class="link" href="mailto:zhanglumi@163.com" target="_blank"><div class="icon"><i class="fa-solid fa-envelope"></i></div>send a email</a>
+    </div>
+
+  </section>
+
+  <section class="footer">
+    <div class="support-by">Support by <a href="">Kiameow</a></div>
+    <div class="inspired-by">Inspired by 
+      <span class="thanks-link">
+        <a href="">Medium</a>
+        <a href="">Douban</a>
+        <a href="">FreeCodeCamp</a>
+      </span>
+      
+    </div>
+  </section>
+  <script src="js/import_articles.js"></script>
+  <script>
+    function getArticle(category, id) {
+      const articleJson = localStorage.getItem('articles');
+      const articleData = JSON.parse(articleJson);
+      
+      const set = articleData[category];
+      if(!set) {
+        return null;
+      }
+
+      const selectedAticle = set.find(article => article.id == id);
+      return selectedAticle || null;
+    }
+
+    const category = localStorage.getItem('category');
+    const id = localStorage.getItem('id');
+    const article = getArticle(category, id);
+    $.get("./tpl/articlePage.ejs", function(result){
+      const articleSection = ejs.compile(result)({ article });
+      $("#main").html(articleSection);
+    });
+    
+    window.history.replaceState({}, '', `/${category}/${id}`)
+  </script>
+</body>
+</html>

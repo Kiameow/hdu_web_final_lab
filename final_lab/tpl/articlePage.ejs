@@ -1,0 +1,19 @@
+<section class="article">
+  <div class="heading">
+    <h1><%= article.title %></h1>
+    <p class="article-description">
+      <%= article.description %>
+    </p>
+    <div class="tags">
+      <% article.tags.forEach(function(tag) { %>
+        <div class="tag"><%= tag %></div>  
+      <% }) %>
+    </div>
+  </div>
+
+  <div class="content">
+    <%= article.content %>
+  </div>
+</section>
+
+ 

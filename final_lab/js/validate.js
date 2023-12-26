@@ -12,6 +12,4 @@ function checkCookie() {
   }
 }
 
-$(document).ready(function() {
-  checkCookie();
-})
+checkCookie();

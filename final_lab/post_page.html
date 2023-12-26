@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Comment</title>
+  <link rel="stylesheet" href="css/postPage.css">
+  <script src="js/jquery-3.7.1.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" crossorigin="anonymous"></script>
+  <script src="js/validate.js"></script>
+</head>
+<body>
+  <section class="navbar">
+    <div class="logo">
+      <p class="lobster">K</p>
+      <h1>Comment</h1>
+    </div>
+    <div class="navigator">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/view_page.html">Articles</a></li> 
+        <li><a href="#">Write</a></li>
+        <li><a href="/index.html#contact">Contact</a></li> 
+      </ul>
+    </div>
+  </section>
+
+  <section class="main">
+    <form class="post-table" method="get">
+      <div class="row-units">
+        <div class="post-unit">
+          <label for="title">标题</label>
+          <input id="title" type="text" placeholder="请键入标题" value="这是一个标题">
+        </div>
+        <div class="post-unit">
+          <label for="description">副标题/简短描述</label>
+          <input id="description" type="text" placeholder="请键入文字" value="这是一个描述">
+        </div>
+        <div class="post-unit" id="category">
+          <label>类型</label>
+          <label><input type="radio" name="category" value="book" id="book">书评</label>
+          <label><input type="radio" name="category" value="movie" id="movie">影评</label>
+        </div>
+        <div class="post-unit">
+          <label for="tags">标签</label>
+          <select name="tags" id="tags">
+
+          </select>
+        </div>
+      </div>
+      
+      <div class="col-units">
+        <div class="post-img">
+          <div class="post-img-word">
+            <label >封面图片</label>
+            <label for="cover" class="file-upload">
+              上传图片
+            </label>
+            <input id="cover" type="file">
+          </div>
+          <img src="" alt="">
+        </div>
+        <div class="post-img">
+          <div class="post-img-word">
+            <label >背景图片</label>
+            <label for="background" class="file-upload">
+              上传图片
+            </label>
+            <input id="background" type="file">
+          </div>
+          
+          <img src="" alt="">
+        </div>
+        <div>
+          <label for="img-url">图片地址</label>
+          <input type="text" name="img-url" id="img-url"
+          value="https://ooo.0x0.ooo/2023/12/21/OKKDml.jpg">
+        </div>
+        
+      </div>
+
+      <div class="post-content">
+        <label for="post-content">文章内容</label>
+        <textarea name="post-content" id="post-content" cols="30" rows="10"
+        placeholder="开始你的写作吧">文章内容sdsdsdadasd</textarea>
+      </div>
+
+      <div class="form-submit">
+        <input type="submit" name="" id="form-submit" value="发布">
+      </div>
+    </form>
+  </section>
+
+  <div id="notification"></div>
+  <section class="footer">
+    <div class="support-by">Support by <a href="">Kiameow</a></div>
+    <div class="inspired-by">Inspired by 
+      <span class="thanks-link">
+        <a href="https://medium.com/">Medium</a>
+        <a href="https://movie.douban.com/explore">Douban</a>
+        <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
+      </span>
+    </div>
+  </section>
+  <script>
+    const bookTags = [
+      '小说', '非小说', '科幻', '推理', '历史',
+      '文学经典', '悬疑', '励志', '爱情', '冒险',
+      '儿童文学', '科普', '恐怖', '传记', '自助',
+      '心理学', '原版小说', '古典文学', '诗集', '漫画/图书'
+    ];
+
+    const movieTags = [
+      '动作', '冒险', '喜剧', '爱情', '科幻',
+      '恐怖', '惊悚', '战争', '纪录片', '动画',
+      '剧情', '悬疑', '犯罪', '奇幻', '历史',
+      '战争', '灾难', '儿童/家庭', '音乐/歌舞'
+    ];
+    
+    function generateTags(tagArray) {
+      const container = document.getElementById('tags');
+      container.innerHTML = '';
+
+      tagArray.forEach(tag => {
+        const tagOption = document.createElement('option');
+
+        tagOption.value = tag;
+        tagOption.appendChild(document.createTextNode(`${tag}`))
+        container.appendChild(tagOption);
+      });   
+    }
+
+    const categoryContainer = document.getElementById('category');
+
+    // 初始化选中状态
+    categoryContainer.querySelector('#book').checked = true;
+    generateTags(bookTags);
+    categoryContainer.addEventListener('change', function(event) {
+      const selectedCategory = event.target.value;
+
+      switch (selectedCategory) {
+        case 'book':
+          generateTags(bookTags);
+          break;
+        case 'movie':
+          generateTags(movieTags);
+          break;
+        default:
+          break;
+      }
+    });
+
+  </script>
+  <script src="js/import_articles.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>
