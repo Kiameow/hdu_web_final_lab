@@ -36,12 +36,12 @@
 ## 基本界面
 
 ### 主页/HomePage
-![](img/HomePage.png)
+![](readme_img/HomePage.png)
 ### 文章总览页面/ViewPage
-![](img/ViewPage.png)
+![](readme_img/ViewPage.png)
 ### 文章页面/ArticlePage
-![](img/ArticlePage.png)
+![](readme_img/ArticlePage.png)
 ### 表单页面/PostPage
-![](img/PostPage.png)
+![](readme_img/PostPage.png)
 
 
