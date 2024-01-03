@@ -78,7 +78,7 @@
         entryCard.classList.add("entry-card");
 
         // 添加点击事件处理程序，用于导航到 articlePage.html
-        entryCard.href = `${category}/${article.id}`;
+        entryCard.href = `article_page.html?cate=${category}&id=${article.id}`;
 
         // 创建 img 元素并设置属性
         const imgElement = document.createElement("img");
@@ -111,10 +111,6 @@
         cardsContainer.appendChild(entryCard);
       });
     });
-  </script>
-
-  <script src="js/router.js">
-    
   </script>
 </body>
 </html>
